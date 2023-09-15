@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="C:/Users/Mip/Desktop/Curso SQL/Northwind.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="3124"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,8:mainProducts"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="Categories" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="101"/><column index="2" value="129"/><column index="3" value="300"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Customers" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="105"/><column index="2" value="264"/><column index="3" value="156"/><column index="4" value="300"/><column index="5" value="111"/><column index="7" value="88"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Employees" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="106"/><column index="2" value="89"/><column index="3" value="91"/><column index="4" value="91"/><column index="5" value="99"/><column index="6" value="300"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="OrderDetails" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="122"/><column index="2" value="73"/><column index="3" value="90"/><column index="4" value="78"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Orders" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="73"/><column index="2" value="105"/><column index="3" value="106"/><column index="4" value="93"/><column index="5" value="89"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Products" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="90"/><column index="2" value="254"/><column index="3" value="94"/><column index="4" value="101"/><column index="5" value="156"/><column index="6" value="57"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Rewards" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="90"/><column index="2" value="106"/><column index="3" value="71"/><column index="4" value="113"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Suppliers" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="94"/><column index="2" value="294"/><column index="3" value="197"/><column index="4" value="300"/><column index="5" value="104"/><column index="7" value="91"/><column index="8" value="120"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="Consultas">--SELECT FirstName AS Nombre, LastName AS Apellido FROM Employees
+
+--SELECT * FROM Products
+--ORDER BY ProductName, ProductID DESC
+
+--SELECT DISTINCT ProductName 
+--FROM Products ORDER BY RANDOM()
+
+--SELECT ProductName FROM Products
+--WHERE ProductID = 14
+
+--SELECT * FROM Products
+--WHERE Price &gt;= 40
+
+--DELETE FROM turnos_medicos
+--WHERE id_turno = 3;
+
+--SELECT * FROM turnos_medicos
+
+--UPDATE turnos_medicos
+--SET horario = '10:30',
+--motivo = 'Dolor de muelas'
+--WHERE id_turno = 2;
+
+--SELECT * FROM turnos_medicos
+
+--SELECT * FROM Customers
+--WHERE CustomerID &gt;= 50 AND CustomerID &lt; 55
+
+--SELECT * FROM Employees
+--WHERE FirstName = 'Nancy' OR FirstName = 'Anne'
+
+--SELECT * FROM Products
+--WHERE (Price &lt; 20 OR CategoryID = 6) AND SupplierID = 7
+
+--SELECT * FROM Products
+--WHERE NOT Price &gt; 40
+
+--SELECT * FROM Customers
+--WHERE NOT Country = 'USA' AND NOT Country = 'France'
+
+--SELECT * FROM Customers
+--WHERE CustomerID &gt;= 50
+--AND NOT Country = 'Germany'
+--AND NOT Country = 'UK'
+--AND NOT Country = 'Argentina'
+--AND NOT country = 'Mexico'
+--AND NOT Country = 'USA'
+--AND NOT Country = 'France'
+--LIMIT 5
+
+--SELECT * FROM Products
+--WHERE NOT CategoryID = 6
+--AND NOT SupplierID = 1
+--AND Price &lt;= 30
+--ORDER BY random()
+--LIMIT 3
+
+--SELECT * FROM Customers WHERE Country != 'USA'
+
+--SELECT * FROM Products WHERE Price BETWEEN 20 AND 40 AND CategoryID = 6
+
+--SELECT * FROM Products WHERE Price NOT BETWEEN 20 AND 40
+
+--SELECT * FROM Employees WHERE BirthDate BETWEEN '1950-0-1' AND '1970-0-1'
+
+--SELECT * FROM Employees WHERE LastName like '%er%'
+
+--SELECT * FROM Employees WHERE LastName like '%F____r%'
+
+--SELECT * FROM Products 
+--WHERE ProductName IS NOT NULL
+--ORDER BY ProductName ASC
+
+--SELECT * FROM Products 
+--WHERE SupplierID IN (3,4,5,6)
+
+--SELECT count(FirstName) AS 'Cantidad de nombres' FROM Employees
+
+--SELECT sum(Price) FROM Products
+
+--SELECT avg(Price) FROM Products
+
+--SELECT round(avg(Price), 2) FROM Products
+
+--SELECT min(Price) FROM Products
+--WHERE ProductName IS NOT NULL
+
+--SELECT ProductName, max(Price) FROM Products
+--WHERE ProductName IS NOT NULL
+
+--SELECT SupplierID, round(avg(Price)) AS 'promedio' FROM Products 
+--GROUP BY SupplierID 
+--ORDER BY promedio DESC
+
+--SELECT CategoryID, round(avg(Price)) AS 'promedio' FROM Products
+--WHERE CategoryID IS NOT NULL
+--GROUP BY CategoryID
+
+--SELECT SupplierID, round(avg(Price)) AS 'promedio' FROM Products
+--WHERE ProductName IS NOT NULL
+--GROUP BY SupplierID
+--HAVING promedio &gt; 40
+
+--SELECT ProductID, sum(Quantity) AS 'total' FROM OrderDetails
+--GROUP BY ProductID
+--HAVING total &gt; 50
+--ORDER BY total
+
+SELECT ProductID, sum(Quantity) AS 'total' FROM OrderDetails
+GROUP BY ProductID
+ORDER BY total ASC
+LIMIT 1
+
+
+</sql><sql name="Subconsultas">--SELECT ProductID, Quantity FROM OrderDetails
+
+--SELECT ProductName FROM Products WHERE ProductID = 11
+
+--Las subconsultas pueden ser usadas para buscar datos fuera de una tabla dentro de una consulta.
+--Para los siguientes ejemplos ten en cuenta que tu tabla principal es OrderDetails y lo declaras en el ultimo FROM de la consulta
+--principal.
+
+--Fijate mucho en como es la identación de las cosas ya que en este gestor de BD puedes confundirte en cual es la consulta principal
+--o subconsulta
+
+-- Vamos a seleccionar el ProductID, Quantity
+SELECT ProductID,
+		Quantity,
+		--Las subconsultas pueden declararse dentro de la consulta principal para regresar el campo con el cual lo vamos a comparar
+		--dentro de la subconsulta
+		--Esta subconsulta regresa el nombre del producto de la tabla Products donde el ProductID de OrderDetails es el mismo
+		(SELECT ProductName FROM Products WHERE OD.ProductID = ProductID) AS 'Nombre',
+		--Esta subconsulta regresa el precio del producto de la tabla Products donde el ProductID de OrderDetails es el mismo
+		(SELECT Price FROM Products WHERE OD.ProductID = ProductID) AS 'Price'
+--Este es el ultimo FROM que pasa a ser de la consulta principal
+FROM OrderDetails AS OD
+
+
+--OJO. Mira como se declara hasta el final la tabla de la consulta principal como OD
+--Esto porque primero pasa a leer la consulta principal donde se declara, para despues compararlo en el WHERE de la subconsulta,
+--esta ya pueda comparar dentro de ella la información leída antes de la subconsulta como los campos ProductID y Quantity
+--de la tabla ya leída como OD.
+		
+
+--Revisa el orden jerarquico de lo que se puede hacer con las subconsultas
+
+--Primero leemos nuestro ProductID de la tabla OrderDetails que se declara más adelante como OD
+SELECT ProductID,
+		--Hacemos la subconsulta donde nos va a dar el ProductName del ProductID igual que el de la tabla OrderDetails
+		(SELECT ProductName FROM Products WHERE OD.ProductID = ProductID) AS 'Nombre',
+		--Hacemos la suconsulta donde nos va a dar el Price del ProductID igual que el de la tabla OrderDetails
+		(SELECT Price FROM Products WHERE OD.ProductID = ProductID) AS 'Price',
+		--Sumamos Quantity y lo declaramos como total_vendido
+		sum(Quantity) AS 'total_vendido',
+		--Redondeamos el resultado de: La suma de Quantity por el precio del producto cuyo ProductID ya es el de nuestra tabla principal
+		--y lo guardamos como total_recaudado porque esto nos multiplice la cantidad vendida y se declara dentro la subconsulta.
+		--Para después ser multiplicado por el precio del producto de Products donde el id es el mismo y lo guarda como total_recaudado
+		round((sum(Quantity) * (SELECT Price FROM Products WHERE OD.ProductID = ProductID))) AS 'total_recaudado'
+--Cerramos nuestro ultimo from que va a declarar nuestra tabla principal como OD para poder ser compara en las subconsultas
+--anteriores
+FROM OrderDetails AS OD
+--Esta condición devolverá lo que nos arrojó la subconsulta que denominamos como Price dentro de la consulta principal y lo comparamos
+--para que nos regrese solo aquellos cuyo precio unitario es mayor a 40
+WHERE Price &gt; 40
+--Lo agrupamos por nuestro ProductID para que podamos seleccionar todas las ventas del ProductID de 1 sólo índice único de nuestro
+--primer ProductID, los suma y nos muestra el total que vendera cada producto.
+GROUP BY ProductID
+--Ordenamos hasta el final por el total_recaudado que nos devolvió la última suconsulta declarada
+ORDER BY total_recaudado ASC
+--LIMIT 1
+		
+		
+SELECT ProductID,
+		(SELECT ProductName FROM Products WHERE OD.ProductID = ProductID) AS 'Nombre',
+		sum(Quantity) AS 'total_vendido' ,
+		round((sum(Quantity) * (SELECT Price FROM Products WHERE OD.ProductID = ProductID))) AS 'total_recaudado'
+FROM OrderDetails AS OD
+WHERE (SELECT Price FROM Products WHERE OD.ProductID = ProductID) &gt; 40
+GROUP BY ProductID
+ORDER BY total_recaudado ASC
+
+
+--Fijate en la siguiente forma de utilizar subconsultas
+--Vas a utilizar una subconsulta como tu tabla pricipal y esto te permite a utilizar sólo los campos y las condiciones que declaras
+--en esta subconsulta como tu tabla principal
+
+--OJO. Revisa la subconsulta anterior para que veas los datos que te devolverá la tabla y como estan declarados
+
+--Vamos a utilizar el FROM principal abriendo directamente una subconsulta como paréntesis principales
+SELECT * FROM (
+		SELECT ProductID,
+			(SELECT ProductName FROM Products WHERE OD.ProductID = ProductID) AS 'Nombre',
+			sum(Quantity) AS 'total_vendido' ,
+			round((sum(Quantity) * (SELECT Price FROM Products WHERE OD.ProductID = ProductID))) AS 'total_recaudado'
+	FROM OrderDetails AS OD
+	WHERE (SELECT Price FROM Products WHERE OD.ProductID = ProductID) &gt; 40
+	GROUP BY ProductID
+	ORDER BY total_recaudado ASC
+)--Termina el paréntesis principal
+
+
+--De aquí observa como gracias a que esta es una tabla aparte te permite trabajar únicamente con los datos de la tabla que estás creando
+
+SELECT Nombre, total_vendido, total_recaudado FROM (
+		SELECT ProductID,
+			(SELECT ProductName FROM Products WHERE OD.ProductID = ProductID) AS 'Nombre',
+			sum(Quantity) AS 'total_vendido' ,
+			round((sum(Quantity) * (SELECT Price FROM Products WHERE OD.ProductID = ProductID))) AS 'total_recaudado'
+	FROM OrderDetails AS OD
+	WHERE (SELECT Price FROM Products WHERE OD.ProductID = ProductID) &gt; 40
+	GROUP BY ProductID
+	ORDER BY total_recaudado ASC
+--Observa como puedes poner condiciones que tu sepas que cumplen para poder trabajar con una cantidad menor de datos
+) 
+WHERE total_vendido &gt; 100
+ORDER BY total_vendido DESC
+LIMIT 5</sql><sql name="Ejercicio_subconsulta">--Obtener a los empleados que lograron vender más cantidad de unidades que el promedio
+--SELECT * FROM Employees
+
+--SELECT * from OrderDetails
+
+--SELECT * from Orders
+
+SELECT 
+	FirstName,
+	LastName,
+	(SELECT sum(od.Quantity) FROM [Orders] o, [OrderDetails] od
+	 WHERE o.EmployeeID = e.EmployeeID AND od.OrderID = o.OrderID
+	 ) AS unidades_totales
+FROM [Employees] e
+WHERE unidades_totales &gt; (SELECT avg(unidades_totales) 
+						  FROM( SELECT 
+								(SELECT sum(od.Quantity) FROM [Orders] o, [OrderDetails] od WHERE o.EmployeeID = e2.EmployeeID AND od.OrderID = o.OrderID) as unidades_totales FROM [Employees] e2
+	GROUP BY e2.EmployeeID
+	)
+)
+
+</sql><sql name="Joins">--Exiten tipos de JOIN que se pueden utilizar en SQL: INNER JOIN, LEFT JOIN, RIGHT JOIN, CROSS JOIN y FULL JOIN
+--Si ejecutas esto sin el where se puede considerar un CROSS JOIN sin utilizar la palabra reservada.
+--Pero si decides ejecutar con la condición WHERE entonces combinaría los datos que le pides de cada tabla que se declara donde se cumpla
+--tu condición y entonces sería un INNER JOIN implicito. La verdad esto es muy complejo así que dedica a usar las palabras reservadas
+SELECT * FROM Employees e, Orders o
+WHERE e.EmployeeID = o.EmployeeID
+
+--La siguiente es la forma correcta de como escribir un INNER JOIN con las palabras reservadas
+
+SELECT LastName, FirstName, OrderID FROM Employees e
+INNER JOIN Orders o ON e.EmployeeID = o.EmployeeID
+
+--Crearemos primero una tabla
+--CREATE TABLE &quot;Rewards&quot; (
+--&quot;RewardID&quot; INTEGER,
+--&quot;EmployeeID&quot; INTEGER,
+--&quot;Reward&quot; INTEGER,
+--&quot;Month&quot; TEXT,
+--PRIMARY KEY(&quot;RewardID&quot; AUTOINCREMENT)
+--)
+
+--Mira como se insertan los datos en un tabla
+--INSERT INTO Rewards (EmployeeID, Reward, Month) VALUES
+--(3,200,&quot;January&quot;),
+--(2,180,&quot;February&quot;),
+--(5,250,&quot;March&quot;),
+--(1,280,&quot;April&quot;),
+--(8,160,&quot;May&quot;),
+--(NULL,NULL,&quot;June&quot;
+--)
+
+--Esta es la forma correcta en la que se escriben los JOIN
+
+--INNER JOIN
+SELECT FirstName, Reward, Month FROM Employees e
+INNER JOIN Rewards r ON e.EmployeeID = r.EmployeeID
+--Este tipo de JOIN muestra la coincidencia entre las dos tablas según el índice que compara
+
+--LEFT JOIN
+SELECT FirstName, Reward, Month FROM Employees e
+LEFT JOIN Rewards r ON e.EmployeeID = r.EmployeeID
+--Este tipo de JOIN muestra los todos los datos o sólo los que le pedimos de la primer tabla (LEFT) y la información donde coincida
+
+--RIGHT JOIN
+--Para este tipo de JOIN podemos realizarlo con la lógica de cambiar el orden de las tablas que queremos manipular, esto porque
+--SQLite no permite el comando RIGHT JOIN. Entonces tendrás que invertir las tablas de donde sacas los datos
+SELECT FirstName, Reward, Month FROM Rewards r
+LEFT JOIN Employees e ON r.EmployeeID = e.EmployeeID
+--OJO. Si vas a hacer esto con la lógica que acabas de aplicar, asegurate de dejar un comentario sobre cómo funciona el LEFT JOIN
+--debido a que no van a saber que estás aplicando un RIGHT JOIN pero no se permite esa palabra reservada en SQLite.
+
+--FULL JOIN
+--Aquí la forma en la que se representa es que estamos uniendo un LEFT JOIN con una simulación de un RIGHT JOIN
+SELECT FirstName, Reward, Month FROM Employees e
+LEFT JOIN Rewards r ON e.EmployeeID = r.EmployeeID
+
+UNION ALL
+--Simulando un RIGHT JOIN
+SELECT FirstName, Reward, Month FROM Rewards r
+LEFT JOIN Employees e ON r.EmployeeID = e.EmployeeID
+
+--UNION
+
+</sql><sql name="Ejercicio_joins_1">--Crearemos primero una tabla
+--CREATE TABLE &quot;Rewards&quot; (
+--&quot;RewardID&quot; INTEGER,
+--&quot;EmployeeID&quot; INTEGER,
+--&quot;Reward&quot; INTEGER,
+--&quot;Month&quot; TEXT,
+--PRIMARY KEY(&quot;RewardID&quot; AUTOINCREMENT)
+--)
+
+--Mira como se insertan los datos en un tabla
+--INSERT INTO Rewards (EmployeeID, Reward, Month) VALUES
+--(3,200,&quot;January&quot;),
+--(2,180,&quot;February&quot;),
+--(5,250,&quot;March&quot;),
+--(1,280,&quot;April&quot;),
+--(8,160,&quot;May&quot;),
+--(NULL,NULL,&quot;June&quot;
+--)
+
+--Esta es la forma correcta en la que se escriben los JOIN
+
+--INNER JOIN
+SELECT FirstName, Reward, Month FROM Employees e
+INNER JOIN Rewards r ON e.EmployeeID = r.EmployeeID
+--Este tipo de JOIN muestra la coincidencia entre las dos tablas según el índice que compara
+
+--LEFT JOIN
+SELECT FirstName, Reward, Month FROM Employees e
+LEFT JOIN Rewards r ON e.EmployeeID = r.EmployeeID
+--Este tipo de JOIN muestra los todos los datos o sólo los que le pedimos de la primer tabla (LEFT) y la información donde coincida
+
+--RIGHT JOIN
+--Para este tipo de JOIN podemos realizarlo con la lógica de cambiar el orden de las tablas que queremos manipular, esto porque
+--SQLite no permite el comando RIGHT JOIN. Entonces tendrás que invertir las tablas de donde sacas los datos
+SELECT FirstName, Reward, Month FROM Rewards r
+LEFT JOIN Employees e ON r.EmployeeID = e.EmployeeID
+--OJO. Si vas a hacer esto con la lógica que acabas de aplicar, asegurate de dejar un comentario sobre cómo funciona el LEFT JOIN
+--debido a que no van a saber que estás aplicando un RIGHT JOIN pero no se permite esa palabra reservada en SQLite.
+
+
+
+</sql><sql name="Indices">
+--Esta línea sirve para crear índices que repitan datos
+CREATE UNIQUE INDEX name ON Employees (FirstName, LastName)
+
+SELECT * FROM Products</sql><sql name="Vistas">CREATE VIEW Productos_simplificados AS
+
+SELECT ProductID, ProductName, Price FROM Products
+WHERE ProductID &gt; 20
+ORDER BY ProductID DESC
+
+SELECT * FROM Productos_simplificados
+WHERE ProductName IS NOT NULL
+
+DROP VIEW IF EXISTS Productos_simplificados</sql><sql name="Transacciones">--Este comando permite iniciar a escribir comandos dentro de una TRANSACTION y no los hace efectivos hasta usar el COMMIT
+BEGIN;
+
+--El comando UPDATE es el más usual a la hora de realizar TRANSACTION
+UPDATE Products SET ProductName = 'Chais' WHERE ProductName = 'tazon';
+
+--Este comando permite relizar el cambio en la base de datos y no es reversible
+COMMIT
+
+--Ejemplo para realizar un cambio en la DB
+BEGIN;
+UPDATE Products SET ProductName = 'tazon' WHERE ProductName = 'Chais';
+COMMIT
+
+
+--Este comando se utiliza para poder regresar cambios antes de terminar la TRANSACTION
+ROLLBACK
+COMMIT
+--DELETE FROM Products WHERE 0;
+
+
+SELECT * FROM Products</sql><current_tab id="7"/></tab_sql></sqlb_project>
