@@ -1,0 +1,35 @@
+[33mcommit e268deeb6336e33c24d3acd75c118d58c39a7c72[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Mip <mariomip98@gmail.com>
+Date:   Fri Sep 15 14:45:53 2023 -0600
+
+    Se creo el archivo texto
+
+[33mcommit 913c9ae122ea932527ab542b5eb72ae36f94325e[m
+Author: Mip <mariomip98@gmail.com>
+Date:   Fri Sep 15 14:43:42 2023 -0600
+
+    Agregando cambios a gitignore
+
+[33mcommit 5d49d4ed60d7c75be4c6001b3ad3407a98bb775e[m
+Author: Mip <mariomip98@gmail.com>
+Date:   Fri Sep 15 14:39:10 2023 -0600
+
+    Agregando archivo gitignore
+
+[33mcommit b18adb27ecd8df85b4d9b9348574dec20cf9dd3e[m
+Author: Mip <mariomip98@gmail.com>
+Date:   Fri Sep 15 14:00:25 2023 -0600
+
+    Agregando los ejercicios de SQL
+
+[33mcommit e0bc0a02d501235abe584c345cf16d1d122a131b[m
+Author: Mip <mariomip98@gmail.com>
+Date:   Fri Sep 15 13:55:54 2023 -0600
+
+    Agregando Cursp Codigo Facilito
+
+[33mcommit a7bceb30a889868e6d88fb04a9d23f207c9ce218[m
+Author: Mip <mariomip98@gmail.com>
+Date:   Fri Sep 15 13:50:45 2023 -0600
+
+    Agregando todos los archivos al repositorio
