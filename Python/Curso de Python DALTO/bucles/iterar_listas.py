@@ -13,3 +13,14 @@ for numero in numeros:
 for numero, animal in zip(animales,numeros):
     print(f"Recorriendo lista 1 {numero}")
     print(f"Recorriendo lista 2 {animal}")
+
+#Forma no óptima de recorrer una lista con su índice
+for num in range(len(numeros)):
+    print(num)
+    
+#Forma correcta de recorrer una lista con su índice
+for num in enumerate(numeros):
+    indice = num[0]
+    valor = num[1]
+    print(f"El índice es: {indice} y el valor es: {valor}")
+    
