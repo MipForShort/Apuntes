@@ -16,7 +16,8 @@ lista[3] = ingreso_semanal - gasto_fijo_semanal
 
 print("Tu meta debe ser alcanzar\n", meta_sueldo)
 print(mes)
-print("Semana 1", lista[0], "\nSemana 2", lista[1], "\nSemana 3", lista[2], "\nSemana 4", lista[3])
+for semana in lista:
+    print(semana)
 
 suma_mes = sum(lista)
 print("Esto fue lo recaudado en el mes\n", suma_mes)
